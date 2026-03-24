@@ -297,6 +297,90 @@
           "notes_en": "Reading guides are classic 'academic scaffolding,' ideal for reading-heavy social science courses. Directing students on what to focus, skim, and question is far more effective than blind reading.",
           "tags": ["teaching", "reading-guide", "undergraduate", "scaffolding"],
           "difficulty": "basic"
+        },
+        {
+          "id": "tp-004",
+          "title_zh": "首课/课程导论幻灯片",
+          "title_en": "Course Introduction & First Day Slides",
+          "scenario_zh": "新学期第一堂课，需要同时传达课程价值、学习目标、评估规则和教师风格，争取学生留下来。",
+          "scenario_en": "First day of a new semester — need to communicate course value, learning goals, assessment rules, and teaching style to retain students.",
+          "prompt": "Generate a first-day-of-class slide deck from the uploaded syllabus. This is the most important class of the semester — it determines whether students stay or drop. Structure as:\n\n1. Title Slide — course name, instructor, contact information, office hours\n2. The Hook — start with a compelling question, surprising statistic, or real-world puzzle that this course will help students answer. Do NOT start with administrative details.\n3. Why This Course Matters — 2 slides connecting course content to career relevance, current events, or students' daily lives\n4. Course Roadmap — visual overview of the semester's 4-5 major modules (not a wall of text)\n5. What You Will Be Able to Do — 4-5 learning outcomes stated as abilities, not topics ('You will be able to analyze...' not 'This course covers...')\n6. How This Class Works — teaching format (lectures, discussions, labs), what a typical week looks like\n7. Assessment Overview — grading breakdown in a clean table, emphasize what matters most\n8. Course Policies — attendance, AI policy, academic integrity (concise, 1 slide max)\n9. What I Expect from You / What You Can Expect from Me — mutual expectations\n10. Next Steps — what to prepare for Session 2, first reading assignment\n\nTone: warm, enthusiastic, and professional. Make students WANT to take this course.",
+          "notes_zh": "首课的黄金法则：前 5 分钟决定一切。不要上来就念大纲——先用一个引人入胜的问题/案例抓住注意力（The Hook）。把行政事务（考勤、作弊政策等）压缩到最后。上传完整教学大纲（Syllabus PDF）即可自动生成。",
+          "notes_en": "Golden rule of first classes: the first 5 minutes matter most. Don't start by reading the syllabus — hook students with a compelling question or case first. Compress administrative details to the end. Upload the full syllabus PDF for automatic generation.",
+          "tags": ["teaching", "first-day", "syllabus", "introduction", "course-design"],
+          "difficulty": "basic"
+        },
+        {
+          "id": "tp-005",
+          "title_zh": "案例教学幻灯片",
+          "title_en": "Case Method Teaching Slides",
+          "scenario_zh": "使用案例教学法（Harvard Case Method），需要引导式结构而非灌输式讲授。",
+          "scenario_en": "Using the case method (Harvard Case Method) — need a guided inquiry structure rather than direct instruction.",
+          "prompt": "Generate a case-method teaching slide deck from the uploaded case study material. This follows the Harvard Case Method — the instructor facilitates discovery, not delivers answers. Structure as:\n\n1. Title: Case name and the central dilemma\n2. The Protagonist — who is the decision-maker? What is their context and constraints?\n3. The Situation — key background facts presented chronologically (2-3 slides, use timeline if helpful)\n4. The Decision Point — clearly frame the choice the protagonist faces. What must they decide, and why now?\n5. Stakeholder Map — who is affected? What are their interests, power, and positions?\n6. [DISCUSSION BREAK] — slide with 2-3 opening questions for small group discussion (5 min)\n7. Analytical Framework — introduce the theoretical lens students should apply (1 slide, concise)\n8. Data & Evidence — key exhibits, tables, or data points from the case (2-3 slides)\n9. [DISCUSSION BREAK] — slide with deeper analytical questions: 'What would you recommend? Why?'\n10. Resolution (optional) — what actually happened? Was it a good outcome?\n11. Lessons Learned — 3-4 generalizable takeaways that connect back to course theory\n12. Bridge — how does this case connect to next week's topic?\n\nDo NOT reveal the 'answer' early. The entire structure should create productive struggle.",
+          "notes_zh": "案例教学的核心是「不给答案」——让学生在不确定中挣扎，自己推导出结论。幻灯片的角色是「引导路径」而非「展示内容」。两个 [DISCUSSION BREAK] 是关键节点，预留 5-10 分钟小组讨论。上传案例原文 PDF 即可。",
+          "notes_en": "The core of case method is 'don't give answers' — let students struggle through ambiguity and derive conclusions themselves. Slides guide the path, not deliver content. The two [DISCUSSION BREAK] points are critical — allow 5-10 minutes for small group discussion. Upload the case study PDF.",
+          "tags": ["teaching", "case-method", "harvard", "discussion", "inquiry"],
+          "difficulty": "intermediate"
+        },
+        {
+          "id": "tp-006",
+          "title_zh": "理论对比与辨析讲解",
+          "title_en": "Theory Comparison & Contrast Slides",
+          "scenario_zh": "需要在课堂上讲解多个竞争性理论/流派的异同（如新制度主义三大流派、理性选择 vs 建构主义）。",
+          "scenario_en": "Need to teach multiple competing theories/schools of thought and their differences (e.g., three institutionalisms, rational choice vs. constructivism).",
+          "prompt": "Generate a theory comparison slide deck from the uploaded readings/textbook. The goal is to help students distinguish between competing theoretical perspectives. Structure as:\n\n1. Title: 'Comparing [Theory A] vs [Theory B] (vs [Theory C])'\n2. The Puzzle — present a real-world phenomenon and ask: 'How would different theories explain this?'\n3. Historical Context — a timeline showing when each theory emerged and in response to what\n4-6. Theory Deep-Dives — for EACH theory, one slide with:\n   - Core assumptions (about human nature, structure, agency)\n   - Key concepts and vocabulary\n   - Foundational scholars and seminal works\n   - What it explains well / what it misses\n7. Side-by-Side Comparison Table — a structured matrix comparing all theories across 5-6 dimensions (ontology, epistemology, unit of analysis, causal logic, policy implications, key critique)\n8. Applied Exercise — return to the opening puzzle. 'Using Theory A, how would you explain X? Now using Theory B?'\n9. When to Use Which? — practical guidance on choosing between theories based on research question type\n10. Synthesis — can these theories be combined? Under what conditions?\n\nAvoid presenting any theory as 'correct.' Maintain intellectual pluralism throughout.",
+          "notes_zh": "理论对比是社科教学的高频场景。关键设计：(1) 用同一个现象从不同理论角度解读，让学生「体感」差异；(2) 对比表（comparison matrix）是学生最需要的记忆锚点；(3) 不要暗示哪个理论「更好」——培养理论多元主义。",
+          "notes_en": "Theory comparison is a high-frequency social science teaching scenario. Key design: (1) Apply the same phenomenon through different theoretical lenses so students 'feel' the difference; (2) The comparison matrix is the memory anchor students need most; (3) Never imply one theory is 'better' — cultivate theoretical pluralism.",
+          "tags": ["teaching", "theory", "comparison", "frameworks", "pluralism"],
+          "difficulty": "intermediate"
+        },
+        {
+          "id": "tp-007",
+          "title_zh": "期末复习/考前串讲幻灯片",
+          "title_en": "Exam Review & Course Recap Slides",
+          "scenario_zh": "期末考试前需要高密度、结构化地回顾整学期核心内容，帮助学生建立知识图谱。",
+          "scenario_en": "Before final exams, need a high-density, structured review of the entire semester's core content to help students build a knowledge map.",
+          "prompt": "Generate a comprehensive exam review slide deck from all uploaded course materials. This is the last class before the final exam — maximize information density while maintaining clarity. Structure as:\n\n1. Title: 'Course Review — Everything You Need to Know'\n2. Semester Roadmap — visual overview showing how all modules connect (1 slide, big picture)\n3-12. Module Recap — for each major module (adjust number as needed):\n   - Module title and core question it addressed\n   - 3-5 key concepts with concise definitions\n   - The single most important takeaway (in bold)\n   - One example or case that illustrates the concept\n   - How this module connects to the next one (logical thread)\n13. Concept Map — a slide describing a visual web showing relationships between ALL major concepts across the semester\n14. Theory Cheat Sheet — comparison table of all major theories covered, with key dimensions\n15. Common Exam Pitfalls — 3-5 frequent mistakes students make on this type of exam\n16. How to Study — specific study strategies tailored to the exam format (essay vs. multiple choice vs. research design)\n17. Sample Question Walkthrough — one example exam question with a model approach (NOT the answer, but the thinking process)\n18. Q&A Preparation — 'What questions do YOU have?'\n\nPrioritize connections between concepts over isolated definitions. The goal is a knowledge MAP, not a knowledge LIST.",
+          "notes_zh": "复习课的价值在于「连线」而非「复读」——帮学生看到概念之间的关系（知识图谱），而非重复每周内容。上传所有教学 PPT 和大纲，AI 会自动提取跨模块的逻辑线索。提醒学生：理解关系比记忆定义更重要。",
+          "notes_en": "The value of review sessions is 'connecting dots' not 'replaying content' — help students see relationships between concepts (knowledge map), not just repeat weekly material. Upload all lecture slides and syllabus so AI extracts cross-module logical threads. Remind students: understanding relationships matters more than memorizing definitions.",
+          "tags": ["teaching", "exam-review", "final", "recap", "knowledge-map"],
+          "difficulty": "basic"
+        },
+        {
+          "id": "tp-008",
+          "title_zh": "学术写作指导幻灯片",
+          "title_en": "Academic Writing Workshop Slides",
+          "scenario_zh": "教学生如何撰写学术论文/课程论文，重点在方法和结构，而非具体内容。",
+          "scenario_en": "Teaching students how to write academic papers/term papers, focusing on method and structure rather than specific content.",
+          "prompt": "Generate an academic writing workshop slide deck. The audience is undergraduate or early graduate students learning to write their first social science papers. Structure as:\n\n1. Title: 'How to Write a Social Science Paper'\n2. The #1 Mistake — most students write 'book reports,' not 'arguments.' Explain the difference.\n3. Anatomy of a Paper — visual breakdown showing the role of each section (Introduction, Lit Review, Methods, Results, Discussion) with approximate word counts\n4. Starting Right — how to formulate a research question (the 'So What?' test)\n5. The Introduction Formula — 3-move structure: (1) Establish the field, (2) Identify the gap, (3) State your contribution\n6. Literature Review ≠ Summary — how to synthesize, not summarize. Show the difference side by side.\n7. Making an Argument — claim + evidence + reasoning. Show examples of strong vs. weak arguments.\n8. Paragraph Structure — topic sentence → evidence → analysis → transition. One idea per paragraph.\n9. Citation & Academic Integrity — when to cite, how to paraphrase vs. quote, common plagiarism traps\n10. Common mistakes to avoid — list 5-7 frequent errors with before/after examples (e.g., 'I think...' → 'The evidence suggests...')\n11. Writing Process — outline → rough draft → revision → polish. Give realistic time estimates.\n12. Resources — writing center, citation tools, recommended style guides\n\nUse concrete before/after examples throughout. Show, don't just tell.",
+          "notes_zh": "写作指导的核心原则：「展示而非告知」（Show, don't tell）。每个规则都配一个好例子和一个坏例子（before/after）。社科写作最常见的问题：学生写「读书报告」而非「论证」——第 2 页就要直面这个区别。上传课程写作要求文档即可。",
+          "notes_en": "Core principle of writing instruction: 'Show, don't tell.' Pair every rule with a good and bad example (before/after). The most common social science writing problem: students write 'book reports' instead of 'arguments' — address this distinction on slide 2. Upload course writing requirements document.",
+          "tags": ["teaching", "writing", "academic-writing", "workshop", "skills"],
+          "difficulty": "intermediate"
+        },
+        {
+          "id": "tp-009",
+          "title_zh": "翻转课堂预习材料",
+          "title_en": "Flipped Classroom Pre-Class Materials",
+          "scenario_zh": "采用翻转课堂模式，需要将复杂材料压缩为学生课前自学用的简明幻灯片。",
+          "scenario_en": "Using a flipped classroom model — need to compress complex materials into concise self-study slides for students before class.",
+          "prompt": "Generate a flipped classroom pre-class slide deck from the uploaded materials. Students will study these slides BEFORE coming to class, so class time can be used for application and discussion. Structure as:\n\n1. Title: 'Pre-Class Preparation — [Topic]'\n2. What to Learn — 3-4 learning objectives stated as questions students should be able to answer after studying\n3. Estimated Study Time — realistic time estimate (aim for 20-30 minutes max)\n4-10. Core Content — present the essential knowledge in digestible chunks:\n   - One concept per slide\n   - Use analogies and everyday examples to explain abstract ideas\n   - Include a 'Check Your Understanding' question every 2-3 slides\n   - Bold the most important sentence on each slide\n   - Keep text minimal — if a concept needs lengthy explanation, suggest the specific textbook section\n11. Self-Test — 3-5 quick quiz questions (true/false, multiple choice) with answers on the next slide\n12. Prepare for Class — 'Based on what you learned, be ready to discuss: [2-3 application questions]'\n13. Confused? — 'Write down what you found confusing. We will address it in class.'\n\nLanguage should be conversational and encouraging. Assume zero prior knowledge of this specific topic.",
+          "notes_zh": "翻转课堂的核心：课前学知识（低阶认知），课上做应用（高阶认知）。预习材料必须「够短、够简、有检测」——如果学生要看 30 分钟以上，就太长了。嵌入的 Check Your Understanding 帮助学生自我诊断。上传教材相关章节 PDF。",
+          "notes_en": "Flipped classroom core: pre-class for knowledge acquisition (lower cognition), in-class for application (higher cognition). Pre-class materials must be 'short enough, simple enough, with self-checks' — over 30 minutes is too long. Embedded 'Check Your Understanding' helps students self-diagnose. Upload relevant textbook chapter PDFs.",
+          "tags": ["teaching", "flipped-classroom", "pre-class", "self-study", "active-learning"],
+          "difficulty": "basic"
+        },
+        {
+          "id": "tp-010",
+          "title_zh": "学生汇报/答辩模板",
+          "title_en": "Student Presentation Template & Guide",
+          "scenario_zh": "需要为学生提供结课汇报或毕设答辩的结构模板和制作指南。",
+          "scenario_en": "Need to provide students with a structural template and production guide for final course presentations or thesis defenses.",
+          "prompt": "Generate a student presentation guide and template slide deck. The audience is students preparing their first academic presentation (course final project, thesis proposal, or capstone). Structure as:\n\n[Part 1: THE GUIDE — How to Build a Great Presentation]\n1. Title: 'Your Presentation Guide: From Draft to Delivery'\n2. The Golden Rules — 5 rules of academic presentations (one idea per slide, no walls of text, practice out loud, stick to time, anticipate questions)\n3. Common Mistakes — the 5 worst things students do (reading slides word-for-word, too many slides, no structure, forgetting 'So What?', going over time)\n4. Time Management — how many slides for a 10/15/20-minute presentation\n5. Visual Design Tips — font sizes, contrast, image quality, white space\n\n[Part 2: THE TEMPLATE — Fill-in Structure]\n6. Slide 1 Template: Title, your name, course, date\n7. Slide 2 Template: Research Question — 'The question I am trying to answer is...'\n8. Slide 3 Template: Why It Matters — 'This matters because...'\n9. Slide 4 Template: What Others Have Said — key literature in 3-4 bullet points\n10. Slide 5-7 Template: My Approach / Findings / Analysis — one finding per slide\n11. Slide 8 Template: Implications — 'So what? This means that...'\n12. Slide 9 Template: Limitations — 'What my study cannot tell us...'\n13. Slide 10 Template: Thank You & Questions\n14. Bonus: How to Handle Q&A — 'I don't know' is a valid answer, how to buy thinking time\n\nTone: supportive and practical. Assume this is the student's first formal academic presentation.",
+          "notes_zh": "学生汇报模板是「授人以渔」——与其每次帮学生改 PPT，不如一次性提供结构模板。Part 1（方法论）+ Part 2（可填充模板）的双层结构让学生既知道「为什么这样做」又知道「具体怎么做」。特别强调 Q&A 应对技巧——这是学生最焦虑的环节。",
+          "notes_en": "Student presentation templates are 'teaching to fish' — instead of editing student slides repeatedly, provide a one-time structural template. The Part 1 (methodology) + Part 2 (fill-in template) dual structure helps students understand both 'why' and 'how.' Special emphasis on Q&A handling — this is students' biggest anxiety point.",
+          "tags": ["teaching", "student-presentation", "template", "defense", "guide"],
+          "difficulty": "basic"
         }
       ]
     },
