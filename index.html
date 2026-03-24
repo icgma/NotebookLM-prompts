@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NotebookLM 幻灯片提示词库 | Slide Deck Prompts</title>
+  <meta name="description" content="专业、详尽、即用型 NotebookLM 幻灯片生成提示词库。Professional and comprehensive prompt library for NotebookLM slide deck generation.">
+  <meta property="og:title" content="NotebookLM Slide Deck Prompts">
+  <meta property="og:description" content="Curated prompt library for crafting outstanding presentations with NotebookLM.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📑</text></svg>">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="navbar">
+    <div class="nav__inner">
+      <div class="nav__brand">
+        <span class="nav__brand-icon">📑</span>
+        <span class="nav__brand-text" data-i18n="siteTitle">NotebookLM 幻灯片提示词库</span>
+      </div>
+      <div class="nav__controls">
+        <button class="nav__btn nav__lang-btn" id="langToggle" aria-label="Switch Language">
+          <span>🌐</span>
+          <span data-i18n="langSwitch">English</span>
+        </button>
+        <button class="nav__btn" id="themeToggle" aria-label="Toggle theme">
+          🌙
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero" id="hero">
+    <div class="hero__badge">
+      <span class="hero__badge-dot"></span>
+      <span>NotebookLM 2026</span>
+    </div>
+    <h1 class="hero__title">
+      <span data-i18n="siteTitle" class="hero__title-gradient">NotebookLM 幻灯片提示词库</span>
+    </h1>
+    <p class="hero__subtitle" data-i18n="siteSubtitle">
+      专业 · 详尽 · 即用型提示词，助你用 NotebookLM 打造出色演示文稿
+    </p>
+    <div class="search-box">
+      <span class="search-box__icon">🔍</span>
+      <input
+        type="text"
+        class="search-box__input"
+        id="searchInput"
+        data-i18n-placeholder="searchPlaceholder"
+        placeholder="搜索提示词…"
+        autocomplete="off"
+      >
+    </div>
+  </header>
+
+  <!-- Category Navigation -->
+  <div class="category-nav" id="categoryNav">
+    <div class="category-nav__inner" id="categoryNavInner">
+      <!-- Dynamically populated -->
+    </div>
+  </div>
+
+  <!-- Difficulty Filter -->
+  <div class="filter-bar" id="filterBar">
+    <!-- Dynamically populated -->
+  </div>
+
+  <!-- Main Content -->
+  <main class="main" id="mainContent">
+    <!-- Dynamically populated prompt cards -->
+  </main>
+
+  <!-- No Results -->
+  <div class="no-results" id="noResults">
+    <div class="no-results__icon">🔎</div>
+    <p data-i18n="noResults">没有找到匹配的提示词，请尝试其他关键词</p>
+  </div>
+
+  <!-- Quick Start Guide -->
+  <section class="guide" id="guide">
+    <div class="guide__card">
+      <h2 class="guide__title" data-i18n="guideTitle">使用指南</h2>
+      <p class="guide__desc" data-i18n="guideDesc">NotebookLM 幻灯片生成功能速览</p>
+      <ol class="guide__steps" id="guideSteps">
+        <!-- Dynamically populated -->
+      </ol>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <p class="footer__title" data-i18n="footerText">NotebookLM 幻灯片提示词库</p>
+      <p class="footer__sub" data-i18n="footerSub">由学术研究者打造，服务知识工作者</p>
+      <a class="footer__link" href="https://github.com/icgma/NotebookLM-prompts" target="_blank" rel="noopener">
+        GitHub ↗
+      </a>
+    </div>
+  </footer>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

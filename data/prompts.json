@@ -1,0 +1,348 @@
+{
+  "categories": [
+    {
+      "id": "basic-generation",
+      "icon": "🎯",
+      "title_zh": "基础生成类",
+      "title_en": "Basic Generation",
+      "prompts": [
+        {
+          "id": "bg-001",
+          "title_zh": "从文档生成标准演示文稿",
+          "title_en": "Standard Deck from Document",
+          "scenario_zh": "有一份 PDF 或 Google Docs 文档，希望快速生成一套结构清晰的演示文稿。",
+          "scenario_en": "You have a PDF or Google Docs file and want to quickly generate a well-structured presentation.",
+          "prompt": "Generate a comprehensive slide deck from the uploaded document. Organize the content into logical sections with clear headings. Include a title slide, an agenda/outline slide, content slides with key points as bullet lists, and a summary slide at the end.",
+          "notes_zh": "这是最基础的生成提示词。NotebookLM 会自动从文档中提取核心观点并生成幻灯片。建议先上传高质量、结构清晰的源文档以获得最佳效果。",
+          "notes_en": "This is the most fundamental generation prompt. NotebookLM will automatically extract key points from the document. For best results, upload well-structured, high-quality source documents.",
+          "tags": ["beginner", "document", "quick-start"],
+          "difficulty": "basic"
+        },
+        {
+          "id": "bg-002",
+          "title_zh": "从 YouTube 视频生成摘要幻灯片",
+          "title_en": "Summary Deck from YouTube Video",
+          "scenario_zh": "观看了一个有价值的 YouTube 演讲或教程，想将其要点转化为幻灯片。",
+          "scenario_en": "You watched a valuable YouTube talk or tutorial and want to convert its key points into slides.",
+          "prompt": "Create a slide deck summarizing the main ideas from the uploaded YouTube video. Divide the presentation into thematic sections that mirror the video's structure. For each section, extract 3-5 key takeaways. Add a final slide with actionable next steps or recommendations.",
+          "notes_zh": "将 YouTube 链接作为源材料添加到 NotebookLM 笔记本中。AI 会自动分析视频字幕。建议选择有清晰口述内容的视频，而非纯视觉演示。",
+          "notes_en": "Add the YouTube link as a source in your NotebookLM notebook. The AI will analyze video captions automatically. Choose videos with clear narration rather than purely visual demonstrations.",
+          "tags": ["beginner", "youtube", "video", "summary"],
+          "difficulty": "basic"
+        },
+        {
+          "id": "bg-003",
+          "title_zh": "从多源材料合成幻灯片",
+          "title_en": "Synthesized Deck from Multiple Sources",
+          "scenario_zh": "有多份不同来源的资料（论文、网页、视频），需要将它们综合成一套统一的演示文稿。",
+          "scenario_en": "You have multiple sources (papers, web pages, videos) and need to synthesize them into one unified presentation.",
+          "prompt": "Generate a slide deck that synthesizes information from all uploaded sources. Cross-reference key themes across sources, identify areas of agreement and disagreement, and present a unified narrative. Include citations indicating which source each point comes from. Structure the deck as: Introduction → Core Themes → Cross-Source Analysis → Key Findings → Conclusion.",
+          "notes_zh": "这是 NotebookLM 最强大的功能之一——跨源合成。确保所有源材料已上传到同一个笔记本。当上下文窗口足够大（1.2M tokens）时，AI 可以处理大量材料。",
+          "notes_en": "This is one of NotebookLM's most powerful features — cross-source synthesis. Ensure all sources are uploaded to the same notebook. With a 1.2M token context window, the AI can handle substantial material.",
+          "tags": ["beginner", "multi-source", "synthesis"],
+          "difficulty": "basic"
+        }
+      ]
+    },
+    {
+      "id": "style-branding",
+      "icon": "🎨",
+      "title_zh": "风格定制类",
+      "title_en": "Style & Branding",
+      "prompts": [
+        {
+          "id": "sb-001",
+          "title_zh": "品牌视觉一致性指令",
+          "title_en": "Brand Visual Consistency",
+          "scenario_zh": "公司/机构有品牌手册（Brand Book），需要生成的幻灯片严格遵循品牌规范。",
+          "scenario_en": "Your company/institution has brand guidelines and the slides must strictly follow visual identity standards.",
+          "prompt": "Generate a slide deck following the brand guidelines uploaded as a source. Apply the brand's primary color palette, use the specified fonts throughout, and maintain consistent spacing and layout rules. Ensure every slide feels cohesive with the brand identity. Use a professional, corporate tone.",
+          "notes_zh": "将品牌手册（PDF 格式）作为源文件上传到 NotebookLM。AI 会尝试从中提取颜色、字体和风格要求。效果取决于品牌手册的详细程度。",
+          "notes_en": "Upload your brand book (PDF format) as a source file to NotebookLM. The AI will attempt to extract colors, fonts, and style requirements. Results depend on the level of detail in the brand book.",
+          "tags": ["branding", "corporate", "visual-identity"],
+          "difficulty": "intermediate"
+        },
+        {
+          "id": "sb-002",
+          "title_zh": "学术风格幻灯片",
+          "title_en": "Academic-Style Slides",
+          "scenario_zh": "准备学术会议报告或课堂教学演示，需要正式、引用规范的学术风格。",
+          "scenario_en": "Preparing for an academic conference or classroom lecture and need formal, citation-rich academic styling.",
+          "prompt": "Generate a slide deck in a formal academic style. Use a clean, minimalist design with serif or professional sans-serif fonts. Include proper citations (Author, Year) on each slide where source material is referenced. Add a 'References' slide at the end. Use numbered headings (1.0, 1.1, 2.0...) for clear hierarchy. Avoid decorative elements; prioritize clarity and information density.",
+          "notes_zh": "学术风格强调信息密度和引用规范。生成后可导出为 PPTX，在 PowerPoint 中添加更精确的格式（如上标引用编号）。对于重要学术演示，建议人工审核每条引用的准确性。",
+          "notes_en": "Academic style emphasizes information density and citation rigor. After generation, export to PPTX for precise formatting (e.g., superscript citation numbers). For important presentations, always manually verify citation accuracy.",
+          "tags": ["academic", "research", "conference", "formal"],
+          "difficulty": "intermediate"
+        },
+        {
+          "id": "sb-003",
+          "title_zh": "商务极简风格",
+          "title_en": "Business Minimalist Style",
+          "scenario_zh": "面向企业客户或管理层的汇报，需要简洁有力、专业大气的风格。",
+          "scenario_en": "Presenting to executives or clients, requiring a sleek, impactful, and professional design.",
+          "prompt": "Generate a slide deck in a modern, minimalist business style. Use large, bold headings with minimal body text — no more than 3-4 bullet points per slide. Prioritize white space and visual breathing room. Use a dark-on-light or light-on-dark color scheme. Each slide should convey ONE key message. Replace text with data visualizations (charts, diagrams) where possible.",
+          "notes_zh": "极简风格的核心是「一页一思想」。如果生成的幻灯片文字过多，可以使用单页修改提示词进一步精简。导出为 PPTX 后可添加高质量图片和自定义图表。",
+          "notes_en": "The core principle of minimalist style is 'one idea per slide.' If generated slides are too text-heavy, use per-slide revision prompts to simplify. After PPTX export, add high-quality imagery and custom charts.",
+          "tags": ["business", "minimalist", "executive", "clean"],
+          "difficulty": "intermediate"
+        }
+      ]
+    },
+    {
+      "id": "structure-layout",
+      "icon": "📐",
+      "title_zh": "结构控制类",
+      "title_en": "Structure & Layout",
+      "prompts": [
+        {
+          "id": "sl-001",
+          "title_zh": "指定幻灯片数量与层级",
+          "title_en": "Specify Slide Count and Hierarchy",
+          "scenario_zh": "有明确的时间限制（如 15 分钟演讲），需要精确控制幻灯片数量。",
+          "scenario_en": "You have a strict time limit (e.g., 15-minute talk) and need precise control over slide count.",
+          "prompt": "Generate a slide deck with exactly 12 slides from the uploaded source. Structure them as follows:\n- Slide 1: Title slide\n- Slide 2: Agenda/Outline\n- Slides 3-5: Background and Context\n- Slides 6-9: Core Findings/Arguments\n- Slide 10: Discussion/Implications\n- Slide 11: Summary of Key Takeaways\n- Slide 12: Q&A / Contact Information\n\nEnsure each slide has a clear heading and 3-5 concise bullet points.",
+          "notes_zh": "通过明确指定每张幻灯片的角色，可以让 AI 更精确地分配内容。数字可根据实际需要调整。一般规则：每分钟 1-1.5 张幻灯片。",
+          "notes_en": "By explicitly defining each slide's role, the AI allocates content more precisely. Adjust numbers as needed. Rule of thumb: 1-1.5 slides per minute of speaking time.",
+          "tags": ["structure", "count", "hierarchy", "time-management"],
+          "difficulty": "basic"
+        },
+        {
+          "id": "sl-002",
+          "title_zh": "演讲者备注模式 vs 独立阅读模式",
+          "title_en": "Speaker Notes vs Standalone Reading Mode",
+          "scenario_zh": "需要区分「演讲用」（简洁页面+详细备注）和「阅读用」（自含式详细页面）两种模式。",
+          "scenario_en": "Need to differentiate between 'presenter mode' (clean slides + detailed notes) and 'reading mode' (self-contained detailed slides).",
+          "prompt": "[Speaker Notes Mode]\nGenerate a slide deck optimized for live presentation. Each slide should have:\n- A bold, concise heading\n- 2-3 key points as short phrases (not full sentences)\n- Supporting data or a key visual element\n\nFor each slide, also generate detailed speaker notes (3-5 sentences) that expand on the slide content, include transition phrases, and note key talking points the presenter should emphasize.\n\n---\n\n[Standalone Reading Mode]\nGenerate a detailed, self-contained slide deck designed to be read without a presenter. Each slide should include:\n- A descriptive heading\n- Full explanatory text (4-6 sentences per slide)\n- Inline citations and supporting evidence\n- Clear logical connections between slides\n\nThe reader should fully understand the content without additional commentary.",
+          "notes_zh": "这是两条独立提示词，根据需求选择其一使用。Speaker Notes 模式适合现场演讲；Standalone 模式适合分发给未出席者。两种模式分别对应 NotebookLM 中的不同生成策略。",
+          "notes_en": "These are two independent prompts — use one based on your need. Speaker Notes mode is for live talks; Standalone mode is for distribution to absent audiences. Each maps to a different generation strategy in NotebookLM.",
+          "tags": ["structure", "speaker-notes", "standalone", "presentation-mode"],
+          "difficulty": "intermediate"
+        },
+        {
+          "id": "sl-003",
+          "title_zh": "章节分割与过渡页设计",
+          "title_en": "Section Dividers and Transition Slides",
+          "scenario_zh": "长篇演示文稿需要清晰的章节分割，帮助观众跟踪进度。",
+          "scenario_en": "Long presentations need clear section dividers to help the audience track progress.",
+          "prompt": "Generate a slide deck with distinct section dividers. Between major topics, insert a section title slide that:\n- Uses a large, bold section heading centered on the slide\n- Includes a brief 1-line subtitle describing what the section covers\n- Uses a slightly different background color or visual treatment to signal the transition\n\nAlso include a progress indicator on each section divider showing 'Section X of Y'. Start with a table of contents slide that previews all sections.",
+          "notes_zh": "过渡页是长演示文稿的「路标」。NotebookLM 的 AI 可能不会完美实现视觉差异，但会创建文本层面的分割。导出 PPTX 后可手动美化过渡页。",
+          "notes_en": "Transition slides are 'signposts' for long presentations. NotebookLM may not perfectly implement visual differences, but will create text-level divisions. After PPTX export, enhance transition slides manually.",
+          "tags": ["structure", "sections", "navigation", "long-presentation"],
+          "difficulty": "basic"
+        }
+      ]
+    },
+    {
+      "id": "per-slide-revision",
+      "icon": "✏️",
+      "title_zh": "单页修改类",
+      "title_en": "Per-Slide Revision",
+      "prompts": [
+        {
+          "id": "pr-001",
+          "title_zh": "调整语气与简化内容",
+          "title_en": "Adjust Tone and Simplify Content",
+          "scenario_zh": "某张幻灯片内容过于复杂或语气不合适，需要针对性修改。",
+          "scenario_en": "A specific slide is too complex or its tone doesn't fit the audience, needing targeted revision.",
+          "prompt": "[To simplify]\nRevise this slide to make the content more accessible. Replace jargon with plain language. Reduce the number of bullet points to 3 maximum. Use shorter sentences and simpler vocabulary. The audience is non-technical stakeholders.\n\n[To change tone]\nRevise this slide to use a more [formal/conversational/persuasive/enthusiastic] tone. Maintain the same key information but adjust the word choice and sentence structure to match the desired tone. Make it feel [authoritative/approachable/urgent/inspiring].",
+          "notes_zh": "2026 年初 NotebookLM 新增了单页修改功能，无需重新生成整套幻灯片。方括号中的形容词可根据需要替换。建议一次修改一种属性（语气 OR 内容），避免指令冲突。",
+          "notes_en": "NotebookLM added per-slide revision in early 2026 — no need to regenerate the entire deck. Replace adjectives in brackets as needed. Modify one attribute at a time (tone OR content) to avoid instruction conflicts.",
+          "tags": ["revision", "tone", "simplify", "per-slide"],
+          "difficulty": "basic"
+        },
+        {
+          "id": "pr-002",
+          "title_zh": "优化视觉布局",
+          "title_en": "Optimize Visual Layout",
+          "scenario_zh": "某张幻灯片布局拥挤或视觉层次不清晰。",
+          "scenario_en": "A specific slide has a cluttered layout or unclear visual hierarchy.",
+          "prompt": "Revise this slide to improve its visual layout. Restructure the content into a two-column layout where the left column contains the key points and the right column contains supporting details or a visual element. Increase white space between elements. Use a larger font for the heading and ensure there is a clear visual hierarchy from most important to least important information.",
+          "notes_zh": "NotebookLM 的布局控制能力有限，但可以通过提示词引导内容分区。生成后导出为 PPTX 进行精确的视觉调整是最佳实践。",
+          "notes_en": "NotebookLM has limited layout control, but prompts can guide content zoning. Best practice: export to PPTX for precise visual adjustments after generation.",
+          "tags": ["revision", "layout", "visual", "per-slide"],
+          "difficulty": "intermediate"
+        },
+        {
+          "id": "pr-003",
+          "title_zh": "添加数据可视化指令",
+          "title_en": "Add Data Visualization Instructions",
+          "scenario_zh": "某张幻灯片有数据但用纯文字展示，需要改为图表或可视化形式。",
+          "scenario_en": "A slide contains data presented as plain text that should be converted to charts or visualizations.",
+          "prompt": "Revise this slide to present the data visually instead of as text. Convert the numerical data into a [bar chart / line graph / pie chart / comparison table]. Include axis labels, a legend if needed, and a brief interpretive caption below the chart. Highlight the most significant data point or trend. Remove redundant text that the visualization already conveys.",
+          "notes_zh": "NotebookLM 可能无法直接生成图表图片，但会生成描述性的图表文本指令。导出 PPTX 后，根据这些描述在 PowerPoint 中手动创建图表效果最好。方括号中选择合适的图表类型。",
+          "notes_en": "NotebookLM may not generate chart images directly but will produce descriptive chart instructions. After PPTX export, create charts manually in PowerPoint following these descriptions. Choose the appropriate chart type from the brackets.",
+          "tags": ["revision", "data", "visualization", "charts", "per-slide"],
+          "difficulty": "intermediate"
+        }
+      ]
+    },
+    {
+      "id": "academic-research",
+      "icon": "🔬",
+      "title_zh": "学术研究类",
+      "title_en": "Academic & Research",
+      "prompts": [
+        {
+          "id": "ar-001",
+          "title_zh": "文献综述幻灯片",
+          "title_en": "Literature Review Slides",
+          "scenario_zh": "需要将多篇学术论文整理成文献综述演示文稿，展示研究领域的知识图景。",
+          "scenario_en": "Need to organize multiple academic papers into a literature review presentation showing the field's knowledge landscape.",
+          "prompt": "Generate a literature review slide deck from the uploaded academic papers. Structure the deck as:\n\n1. Title and Research Question\n2. Overview of the Field — key themes and evolution over time\n3-8. Thematic Clusters — group papers by shared themes or methodological approaches. For each cluster:\n   - Name the cluster\n   - Summarize 2-3 key papers with (Author, Year) citations\n   - Identify the main contribution of each paper\n   - Note any methodological limitations\n9. Research Gaps — what remains unexplored\n10. Future Directions — suggested research agenda\n\nMaintain academic rigor throughout. Use formal language.",
+          "notes_zh": "将所有相关论文 PDF 上传到同一 NotebookLM 笔记本。AI 会进行跨论文主题聚类。注意：务必人工核实引用的准确性，AI 可能产生引用误差。",
+          "notes_en": "Upload all relevant paper PDFs to the same NotebookLM notebook. The AI will perform cross-paper thematic clustering. Important: always manually verify citation accuracy, as AI may introduce citation errors.",
+          "tags": ["academic", "literature-review", "papers", "research"],
+          "difficulty": "advanced"
+        },
+        {
+          "id": "ar-002",
+          "title_zh": "方法论展示幻灯片",
+          "title_en": "Methodology Presentation Slides",
+          "scenario_zh": "在学术会议或研究组会议上展示研究方法论，需要清晰、可复现的方法描述。",
+          "scenario_en": "Presenting research methodology at a conference or lab meeting, needing clear, reproducible method descriptions.",
+          "prompt": "Generate a methodology-focused slide deck from the uploaded research document. Include:\n\n1. Research Question and Hypotheses\n2. Research Design Overview (experimental, observational, mixed-methods, etc.)\n3. Data Collection — sources, sampling strategy, sample size, time period\n4. Variables — dependent, independent, and control variables with operationalization\n5. Analytical Methods — statistical tests, models, or qualitative approaches used\n6. Validity and Reliability — how threats to validity are addressed\n7. Ethical Considerations — IRB approval, consent procedures\n8. Limitations and Mitigation Strategies\n\nUse precise methodological terminology. Include formulas or model specifications where applicable.",
+          "notes_zh": "方法论幻灯片是学术评审最关注的部分。确保源文档中包含详细的方法描述。AI 可能简化公式——导出 PPTX 后用 LaTeX 或 MathType 补充。",
+          "notes_en": "Methodology slides receive the most scrutiny from academic reviewers. Ensure your source document contains detailed method descriptions. AI may simplify formulas — supplement with LaTeX or MathType after PPTX export.",
+          "tags": ["academic", "methodology", "research-design", "statistics"],
+          "difficulty": "advanced"
+        },
+        {
+          "id": "ar-003",
+          "title_zh": "研究成果汇报幻灯片",
+          "title_en": "Research Findings Presentation",
+          "scenario_zh": "准备向导师、评审委员会或学术会议汇报研究成果。",
+          "scenario_en": "Preparing to present research findings to a supervisor, review committee, or academic conference.",
+          "prompt": "Generate a research findings presentation from the uploaded paper/report. Follow the IMRAD structure:\n\n1. Title, Authors, Affiliation\n2. Introduction — research problem, significance, and RQs\n3. Key Literature — 2-3 slides on critical prior work\n4. Methods — concise overview (1-2 slides)\n5-8. Results — dedicate 1 slide per major finding. Each should include:\n   - The finding stated clearly as the slide title\n   - Supporting evidence (statistics, effect sizes, p-values)\n   - A description of what a visualization would show\n9. Discussion — interpretation, comparison with prior work\n10. Implications — theoretical and practical\n11. Limitations and Future Work\n12. Thank You / Q&A\n\nUse confidence intervals and effect sizes alongside p-values.",
+          "notes_zh": "IMRAD（Introduction-Methods-Results-And-Discussion）是学术汇报的黄金结构。每个发现单独占一页，标题即结论（declarative title）。这种风格在 Nature/Science 级别的报告中很常见。",
+          "notes_en": "IMRAD (Introduction-Methods-Results-And-Discussion) is the gold standard for academic reporting. Each finding gets its own slide with a declarative title (conclusion as heading). This style is common in Nature/Science-level presentations.",
+          "tags": ["academic", "findings", "IMRAD", "conference", "results"],
+          "difficulty": "advanced"
+        },
+        {
+          "id": "ar-004",
+          "title_zh": "理论框架与因果逻辑展示",
+          "title_en": "Theoretical Framework & Causal Logic",
+          "scenario_zh": "需要向评审或同行清晰地展示研究的理论基础、核心概念之间的因果机制。",
+          "scenario_en": "Need to clearly present the theoretical underpinnings and causal mechanisms between core concepts to reviewers or peers.",
+          "prompt": "Generate a slide deck focused on the theoretical framework of the uploaded research. Structure the deck as:\n\n1. Title and Core Research Question\n2. Theoretical Lineage — which theoretical traditions inform this work (e.g., institutionalism, social constructivism, rational choice)? Show the intellectual genealogy.\n3. Core Concepts — define each key concept with precise operationalization. One concept per slide.\n4. Causal Mechanism — a dedicated slide showing the hypothesized causal chain: Independent Variable → Mediating Mechanism → Dependent Variable. Include moderating conditions.\n5. Hypothesis Map — list all hypotheses (H1, H2, ...) with the theoretical justification for each directional prediction.\n6. Competing Explanations — what alternative theories could explain the same outcome? How does your framework differ?\n7. Scope Conditions — where does this theory apply and where doesn't it?\n8. Conceptual Diagram — describe a visual diagram showing relationships between all variables.\n\nUse precise social science terminology. Cite foundational theorists.",
+          "notes_zh": "理论框架幻灯片是社会科学研究中最核心的部分。一个清晰的因果链条（X→M→Y + 调节变量 W）是说服评审的关键。建议将核心论文和竞争理论论文都上传为源材料，让 AI 自动提取理论谱系。",
+          "notes_en": "Theory framework slides are the backbone of social science research presentations. A clear causal chain (X→M→Y + moderator W) is key to convincing reviewers. Upload both your core papers and competing theory papers as sources.",
+          "tags": ["academic", "theory", "causal-mechanism", "social-science", "framework"],
+          "difficulty": "advanced"
+        },
+        {
+          "id": "ar-005",
+          "title_zh": "政策简报型幻灯片",
+          "title_en": "Policy Brief Presentation",
+          "scenario_zh": "需要将学术研究成果转化为面向政策制定者或公众的简报演示。",
+          "scenario_en": "Need to translate academic research findings into a policy brief for policymakers or the general public.",
+          "prompt": "Generate a policy-oriented slide deck from the uploaded research. The audience is policymakers and practitioners, NOT academics. Structure as:\n\n1. Title: Frame as a policy problem, not a research question\n2. The Problem — what is the issue and why should policymakers care? Use concrete statistics.\n3. What We Know — 2-3 slides summarizing the key evidence in plain language. Avoid methodological details.\n4. Key Finding — ONE slide with the single most actionable finding. Use a large, bold declarative statement.\n5. Policy Implications — 2-3 specific, implementable recommendations. Each starts with an action verb.\n6. Trade-offs & Limitations — honest assessment of what the evidence cannot tell us.\n7. Cost-Benefit Snapshot — outline resource requirements vs. expected impact.\n8. Call to Action — one clear next step for the audience.\n\nUse everyday language. Replace academic jargon with accessible terms. Include real-world examples.",
+          "notes_zh": "学术研究的政策转化是社科研究者的核心能力之一。关键原则：一个发现、一个行动建议、一页说清楚。避免汇报回归系数，改用「做 X 可以提高 Y 约 Z%」的表述。",
+          "notes_en": "Policy translation is a core skill for social science researchers. Key principle: one finding, one action, one slide. Avoid reporting regression coefficients — use 'doing X improves Y by approximately Z%' framing instead.",
+          "tags": ["academic", "policy", "brief", "policymakers", "translation"],
+          "difficulty": "advanced"
+        },
+        {
+          "id": "ar-006",
+          "title_zh": "答辩与基金汇报幻灯片",
+          "title_en": "Thesis Defense & Grant Report Slides",
+          "scenario_zh": "准备学位论文答辩、基金结项汇报，或职称评审述职演示。",
+          "scenario_en": "Preparing for thesis defense, grant final report, or tenure review presentation.",
+          "prompt": "Generate a formal defense/review presentation from the uploaded document. Structure as:\n\n1. Title Slide — title, author, affiliation, date, committee members\n2. Roadmap — visual outline of the presentation\n3. Research Motivation — why this topic matters (2 slides)\n4. Literature Gap — what existing scholarship misses\n5. Research Questions — clearly stated, numbered\n6. Theoretical Framework — key concepts and relationships\n7. Research Design — methodology with justification\n8. Data & Sampling — concise description\n9-12. Key Findings — one finding per slide with declarative title, evidence, visualization, interpretation\n13. Contributions — theoretical, methodological, and practical (listed separately)\n14. Limitations & Future Research — honest self-assessment\n15. Conclusion — 3-4 sentence summary\n16. Thank You & Q&A\n\nMaintain a confident but measured tone. Anticipate likely reviewer questions.",
+          "notes_zh": "答辩幻灯片要「守正出奇」——结构严谨 + 核心发现有冲击力。建议 15-20 分钟对应 15-20 页。提前准备备用页，覆盖导师/评委可能质疑的点（内生性、样本偏差、外部效度）。",
+          "notes_en": "Defense slides balance rigor (structure) with impact (findings). Aim for 15-20 slides for 15-20 minutes. Prepare backup slides addressing likely challenges (endogeneity, sample bias, external validity).",
+          "tags": ["academic", "defense", "thesis", "grant", "tenure"],
+          "difficulty": "advanced"
+        }
+      ]
+    },
+    {
+      "id": "teaching-pedagogy",
+      "icon": "🎓",
+      "title_zh": "教学备课类",
+      "title_en": "Teaching & Pedagogy",
+      "prompts": [
+        {
+          "id": "tp-001",
+          "title_zh": "课堂讲授幻灯片",
+          "title_en": "Lecture Slide Deck",
+          "scenario_zh": "需要为一堂 90 分钟的大学课程准备结构清晰、信息量适中的教学幻灯片。",
+          "scenario_en": "Need to prepare well-structured teaching slides for a 90-minute university lecture.",
+          "prompt": "Generate a lecture slide deck for a university-level course from the uploaded teaching materials. Structure as:\n\n1. Title Slide — course name, lecture number/title, date\n2. Learning Objectives — 3-4 clear, measurable objectives\n3. Recap — brief review of last session (1 slide)\n4. Roadmap — visual outline of today's lecture\n5-20. Content Slides — organize into 3-4 thematic blocks with:\n    - Clear concept definitions with examples\n    - Real-world case studies or applications\n    - Discussion questions every 4-5 slides (marked with 🤔)\n    - Key takeaway boxes at end of each block\n21. Summary — revisit learning objectives\n22. Preview — what to expect next session\n23. Assignment/Reading — specific tasks with deadlines\n\nUse pedagogical best practices: concrete before abstract, examples before theory, simple before complex. Include engagement prompts.",
+          "notes_zh": "教学幻灯片的核心是「为学生着想」：信息分块（chunking）、每 15 分钟设置互动节点、先给案例再讲理论。将教材 PDF 和课程大纲一起上传，AI 会自动对齐教学目标。",
+          "notes_en": "Teaching slides are 'student-centered': chunk information, add interaction points every 15 minutes, present cases before theory. Upload textbook PDFs with syllabus so AI aligns content with learning objectives.",
+          "tags": ["teaching", "lecture", "university", "pedagogy"],
+          "difficulty": "intermediate"
+        },
+        {
+          "id": "tp-002",
+          "title_zh": "研讨课讨论引导幻灯片",
+          "title_en": "Seminar Discussion Guide Slides",
+          "scenario_zh": "研究生研讨课需要引导学生讨论指定阅读文献，而非单向讲授。",
+          "scenario_en": "A graduate seminar requires guiding students through assigned readings via discussion, not lecturing.",
+          "prompt": "Generate a seminar discussion guide from the uploaded readings. This is NOT a lecture — it facilitates student-led discussion.\n\n1. Title and Today's Theme\n2. Readings Overview — list assigned papers with full citations\n3. Author Context — brief background (1 slide per reading)\n4. Core Arguments — for each reading: central argument (1 sentence), supporting evidence, key assumptions\n5. Points of Tension — where do the readings disagree or offer competing explanations?\n6. Discussion Questions — 5-7 open-ended questions that:\n   - Start with 'Why' or 'How' (not 'What')\n   - Connect readings to current events or students' experiences\n   - Progress in complexity (factual → interpretive → evaluative)\n7. Application Exercise — brief in-class activity\n8. Synthesis — key takeaways from today's discussion\n\nKeep slides minimal (titles + questions). The goal is discussion, not information delivery.",
+          "notes_zh": "研讨课 ≠ 讲授课。幻灯片是「提问的脚手架」而非「知识的载体」。好的讨论问题从 Bloom 分类法高层出发（分析、评价、创造），而非底层（记忆、理解）。",
+          "notes_en": "Seminars ≠ Lectures. Slides are 'scaffolding for questions' not 'carriers of knowledge.' Good discussion questions target higher-order Bloom's taxonomy (analyze, evaluate, create).",
+          "tags": ["teaching", "seminar", "discussion", "graduate"],
+          "difficulty": "intermediate"
+        },
+        {
+          "id": "tp-003",
+          "title_zh": "学生阅读导览幻灯片",
+          "title_en": "Student Reading Guide Slides",
+          "scenario_zh": "需要为学生提供课前预习材料，帮助他们有方向地阅读复杂的学术文献。",
+          "scenario_en": "Need to provide pre-class reading guides for students navigating complex academic texts.",
+          "prompt": "Generate a reading guide from the uploaded academic text for undergraduate or early graduate students.\n\n1. Title — 'Reading Guide: [Paper/Chapter Title]'\n2. Why This Reading Matters — connect to course themes (2-3 sentences)\n3. Key Vocabulary — define 5-8 discipline-specific terms\n4. Reading Roadmap — what to focus on in each section:\n   - Sections to read carefully (and why)\n   - Sections to skim (and why)\n   - Sections to skip (if any)\n5. The Author's Argument in 3 Sentences\n6. Guiding Questions — 3-4 questions to answer WHILE reading\n7. Common Misunderstandings — 2-3 things students typically get wrong\n8. Connection to Previous Readings — how does this build on prior material?\n9. Prepare for Class — points to be ready to discuss\n\nUse accessible, encouraging language. Avoid assuming prior knowledge beyond course coverage.",
+          "notes_zh": "阅读导览是「学术脚手架」（scaffolding）的典型应用，特别适合社科文献阅读量大的课程。告诉学生「重点读哪里、略读哪里、带着什么问题去读」远比让他们盲读有效。",
+          "notes_en": "Reading guides are classic 'academic scaffolding,' ideal for reading-heavy social science courses. Directing students on what to focus, skim, and question is far more effective than blind reading.",
+          "tags": ["teaching", "reading-guide", "undergraduate", "scaffolding"],
+          "difficulty": "basic"
+        }
+      ]
+    },
+    {
+      "id": "advanced-techniques",
+      "icon": "🚀",
+      "title_zh": "高级技巧类",
+      "title_en": "Advanced Techniques",
+      "prompts": [
+        {
+          "id": "at-001",
+          "title_zh": "Deep Research + 幻灯片一体化工作流",
+          "title_en": "Deep Research + Slides Integrated Workflow",
+          "scenario_zh": "从零开始——没有现成文档，需要 AI 先做调研再生成幻灯片。",
+          "scenario_en": "Starting from scratch — no existing documents, need the AI to research a topic then generate slides.",
+          "prompt": "Step 1 — Deep Research:\nUse Deep Research to investigate the topic: [YOUR TOPIC HERE]. Gather at least 10 credible sources covering: current state of the field, key debates, recent developments, and future trends.\n\nStep 2 — Generate Slides:\nBased on the Deep Research results, generate a comprehensive slide deck covering:\n1. Topic Overview and Why It Matters\n2. Historical Context / Evolution of the Field\n3-7. Key Themes and Findings (one per slide)\n8. Current Debates and Open Questions\n9. Future Outlook and Predictions\n10. Key Takeaways and Action Items\n\nCite the sources gathered during Deep Research on each slide.",
+          "notes_zh": "这是一个两步工作流：先用 Deep Research 功能收集最多 48 个高质量来源，然后基于这些来源生成幻灯片。替换 [YOUR TOPIC HERE] 为具体主题。整个过程可能需要几分钟。",
+          "notes_en": "This is a two-step workflow: first use Deep Research to gather up to 48 high-quality sources, then generate slides from those sources. Replace [YOUR TOPIC HERE] with your specific topic. The entire process may take several minutes.",
+          "tags": ["advanced", "deep-research", "workflow", "from-scratch"],
+          "difficulty": "advanced"
+        },
+        {
+          "id": "at-002",
+          "title_zh": "迭代优化策略",
+          "title_en": "Iterative Refinement Strategy",
+          "scenario_zh": "初次生成的幻灯片质量不够理想，需要通过多轮迭代提升品质。",
+          "scenario_en": "The initial slide generation isn't satisfactory and needs multi-round iteration to improve quality.",
+          "prompt": "Round 1 — Generate Initial Deck:\nGenerate a slide deck from the uploaded sources. Focus on comprehensive content coverage.\n\nRound 2 — Structure Review:\nReview the generated deck. Reorganize slides for better logical flow. Remove redundant slides and merge slides with overlapping content. Ensure each slide has a single clear message.\n\nRound 3 — Visual Enhancement:\nFor each slide, improve the visual presentation:\n- Convert text-heavy slides into key phrases + supporting visuals\n- Add section dividers between major topics\n- Ensure consistent formatting across all slides\n\nRound 4 — Final Polish:\nRefine language for the target audience. Check all citations. Add speaker notes to each slide with talking points and transition phrases. Generate a polished final version.",
+          "notes_zh": "一次性生成完美幻灯片几乎不可能。这个提示词提供了分四轮的迭代策略：内容→结构→视觉→润色。每轮单独执行，根据结果决定是否需要额外调整。这反映了专业演示文稿的制作流程。",
+          "notes_en": "Generating perfect slides in one pass is nearly impossible. This prompt provides a four-round iteration strategy: Content → Structure → Visual → Polish. Execute each round separately and decide if additional adjustments are needed. This mirrors the professional presentation workflow.",
+          "tags": ["advanced", "iteration", "refinement", "quality"],
+          "difficulty": "advanced"
+        },
+        {
+          "id": "at-003",
+          "title_zh": "导出与后处理完整工作流",
+          "title_en": "Export and Post-Processing Workflow",
+          "scenario_zh": "需要将 NotebookLM 生成的幻灯片导出为可编辑格式，并进行专业级后处理。",
+          "scenario_en": "Need to export NotebookLM-generated slides to an editable format and perform professional post-processing.",
+          "prompt": "Generate a slide deck optimized for PPTX export and subsequent editing in PowerPoint. For each slide, structure content in clearly separated blocks:\n\n- [HEADING BLOCK]: One bold title line\n- [CONTENT BLOCK]: 3-4 bullet points or a short paragraph\n- [VISUAL BLOCK]: A description of the recommended chart, diagram, or image\n- [NOTES BLOCK]: Speaker notes with 3-5 talking points\n\nUse these block labels explicitly so they can be easily identified and formatted after export. Avoid complex nested formatting that may not transfer well to PPTX.",
+          "notes_zh": "这条提示词专门为 PPTX 导出优化。使用显式的块标签（[HEADING BLOCK] 等）使得导出后在 PowerPoint 中更容易识别和重新排版。2026 年 NotebookLM 已支持直接 PPTX 导出，大大简化了后处理流程。",
+          "notes_en": "This prompt is optimized specifically for PPTX export. Explicit block labels ([HEADING BLOCK] etc.) make it easier to identify and reformat content in PowerPoint after export. NotebookLM's 2026 PPTX export support significantly simplifies the post-processing workflow.",
+          "tags": ["advanced", "export", "pptx", "post-processing", "workflow"],
+          "difficulty": "intermediate"
+        }
+      ]
+    }
+  ]
+}
