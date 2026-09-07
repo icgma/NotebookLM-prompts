@@ -35,6 +35,11 @@
         fetch('data/prompts.json'),
         fetch('data/i18n.json')
       ]);
+
+      if (!promptsRes.ok || !i18nRes.ok) {
+        throw new Error(`HTTP error! status: ${promptsRes.status} / ${i18nRes.status}`);
+      }
+
       promptsData = await promptsRes.json();
       i18nData = await i18nRes.json();
     } catch (e) {
@@ -101,10 +106,10 @@
   // --- Category Navigation ---
   function buildCategoryNav() {
     if (!promptsData) return;
-    let html = `<button class="category-nav__btn ${currentCategory === 'all' ? 'active' : ''}" data-cat="all">${t('allCategories')}</button>`;
+    let html = `<button class="category-nav__btn ${currentCategory === 'all' ? 'active' : ''}" data-cat="all">${escapeHtml(t('allCategories'))}</button>`;
     promptsData.categories.forEach((cat) => {
       const title = currentLang === 'zh' ? cat.title_zh : cat.title_en;
-      html += `<button class="category-nav__btn ${currentCategory === cat.id ? 'active' : ''}" data-cat="${cat.id}">${cat.icon} ${title}</button>`;
+      html += `<button class="category-nav__btn ${currentCategory === cat.id ? 'active' : ''}" data-cat="${escapeHtml(cat.id)}">${escapeHtml(cat.icon)} ${escapeHtml(title)}</button>`;
     });
     categoryNavInner.innerHTML = html;
   }
@@ -152,10 +157,10 @@
 
       const catTitle = currentLang === 'zh' ? cat.title_zh : cat.title_en;
       html += `
-        <section class="category-section" id="cat-${cat.id}">
+        <section class="category-section" id="cat-${escapeHtml(cat.id)}">
           <div class="category-section__header">
-            <span class="category-section__icon">${cat.icon}</span>
-            <h2 class="category-section__title">${catTitle}</h2>
+            <span class="category-section__icon">${escapeHtml(cat.icon)}</span>
+            <h2 class="category-section__title">${escapeHtml(catTitle)}</h2>
             <span class="category-section__count">${filteredPrompts.length}</span>
           </div>
           <div class="cards-grid">
@@ -181,36 +186,36 @@
     }[p.difficulty] || p.difficulty;
 
     return `
-      <article class="prompt-card" data-id="${p.id}">
+      <article class="prompt-card" data-id="${escapeHtml(p.id)}">
         <div class="prompt-card__header">
-          <h3 class="prompt-card__title">${title}</h3>
-          <span class="prompt-card__difficulty prompt-card__difficulty--${p.difficulty}">${diffLabel}</span>
+          <h3 class="prompt-card__title">${escapeHtml(title)}</h3>
+          <span class="prompt-card__difficulty prompt-card__difficulty--${escapeHtml(p.difficulty)}">${escapeHtml(diffLabel)}</span>
         </div>
         <p class="prompt-card__scenario">
-          <span class="prompt-card__label">${t('scenarioLabel')}</span>
-          ${scenario}
+          <span class="prompt-card__label">${escapeHtml(t('scenarioLabel'))}</span>
+          ${escapeHtml(scenario)}
         </p>
         <div>
-          <span class="prompt-card__label">${t('promptLabel')}</span>
-          <div class="prompt-card__prompt" id="prompt-${p.id}">
+          <span class="prompt-card__label">${escapeHtml(t('promptLabel'))}</span>
+          <div class="prompt-card__prompt" id="prompt-${escapeHtml(p.id)}">
             ${escapeHtml(p.prompt)}
             <div class="prompt-card__prompt-fade"></div>
           </div>
         </div>
         <div class="prompt-card__actions">
           <button class="prompt-card__copy-btn" data-prompt="${encodeURIComponent(p.prompt)}">
-            📋 ${t('copyBtn')}
+            📋 ${escapeHtml(t('copyBtn'))}
           </button>
-          <button class="prompt-card__expand-btn" data-target="prompt-${p.id}" data-notes="notes-${p.id}">
-            ${t('expandBtn')}
+          <button class="prompt-card__expand-btn" data-target="prompt-${escapeHtml(p.id)}" data-notes="notes-${escapeHtml(p.id)}">
+            ${escapeHtml(t('expandBtn'))}
           </button>
         </div>
         <div class="prompt-card__tags">
-          ${p.tags.map((tag) => `<span class="prompt-card__tag">${tag}</span>`).join('')}
+          ${p.tags.map((tag) => `<span class="prompt-card__tag">${escapeHtml(tag)}</span>`).join('')}
         </div>
-        <div class="prompt-card__notes" id="notes-${p.id}">
-          <span class="prompt-card__label">${t('notesLabel')}</span>
-          ${notes}
+        <div class="prompt-card__notes" id="notes-${escapeHtml(p.id)}">
+          <span class="prompt-card__label">${escapeHtml(t('notesLabel'))}</span>
+          ${escapeHtml(notes)}
         </div>
       </article>
     `;
@@ -314,23 +319,28 @@
   }
 
   // --- Intersection Observer (Card animations) ---
+  let cardObserver = null;
   function setupIntersectionObserver() {
+    if (cardObserver) {
+      cardObserver.disconnect();
+    }
+
     const cards = $$('.prompt-card:not(.visible)');
     if (!cards.length) return;
 
-    const observer = new IntersectionObserver(
+    cardObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry, idx) => {
           if (entry.isIntersecting) {
             setTimeout(() => entry.target.classList.add('visible'), idx * 60);
-            observer.unobserve(entry.target);
+            cardObserver.unobserve(entry.target);
           }
         });
       },
       { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
     );
 
-    cards.forEach((card) => observer.observe(card));
+    cards.forEach((card) => cardObserver.observe(card));
   }
 
   // --- Utils ---
